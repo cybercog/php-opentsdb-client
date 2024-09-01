@@ -1,4 +1,4 @@
-# OpenTSDB PHP Client
+# OpenTSDB PHP HTTP API Client
 
 <p align="center">
 <a href="https://discord.gg/A8Phy8yJH6"><img src="https://img.shields.io/static/v1?logo=discord&label=&message=Discord&color=36393f&style=flat-square" alt="Discord"></a>
@@ -12,7 +12,12 @@
 This package allows you to send metrics (data points) to the OpenTSDB database
 from the PHP application using an HTTP API.
 
-- [OpenTSDB API](http://opentsdb.net/docs/build/html/api_http/index.html)
+- [OpenTSDB HTTP API](http://opentsdb.net/docs/build/html/api_http/index.html)
+
+This package does not cover Telnet API, and that's why:
+
+- Telnet API use cases: quick tests, debugging, or simple commands in a development environment.
+- HTTP API use cases: production applications, complex data queries, integrations with other systems, and secure communications.
 
 ## What is OpenTSDB
 
