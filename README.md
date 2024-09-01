@@ -28,20 +28,6 @@ via the API such as querying time-series data, managing metadata and storing dat
 ## Usage
 
 ```php
-$httpClient = \Http\Adapter\Guzzle7\Client::createWithConfig(
-    [
-        'timeout' => 4,
-        'connect_timeout' => 2,
-        'http_errors' => false,
-    ],
-);
-$openTsdbBaseUri = 'http://localhost:4242';
-
-$openTsdbClient = new \Cog\OpenTsdbClient\OpenTsdbClient(
-    $httpClient,
-    $openTsdbBaseUri,
-);
-
 $dataPointList[] = new \Cog\OpenTsdbClient\DataPoint(
     metric: 'temperature',
     timestamp: time(),
@@ -55,7 +41,18 @@ $dataPointList[] = new \Cog\OpenTsdbClient\DataPoint(
     tags: ['place' => 'north_pole'],
 );
 
-$this->openTsdbClient->sendDataPointList($dataPointList);
+$openTsdbClient = new \Cog\OpenTsdbClient\OpenTsdbClient(
+    httpClient: \Http\Adapter\Guzzle7\Client::createWithConfig(
+        [
+            'timeout' => 4,
+            'connect_timeout' => 2,
+            'http_errors' => false,
+        ],
+    ),
+    baseUri: 'http://localhost:4242',
+);
+
+$openTsdbClient->sendDataPointList($dataPointList);
 ```
 
 ## Alternatives
