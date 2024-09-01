@@ -19,6 +19,9 @@ This package does not cover Telnet API, and that's why:
 - Telnet API use cases: quick tests, debugging, or simple commands in a development environment.
 - HTTP API use cases: production applications, complex data queries, integrations with other systems, and secure communications.
 
+OpenTSDB HTTP API supported by:
+- [VictoriaMetrics](https://docs.victoriametrics.com/#sending-opentsdb-data-via-http-apiput-requests) 
+
 ## What is OpenTSDB
 
 OpenTSDB is a distributed, scalable Time Series Database (TSDB) written on top of HBase.
