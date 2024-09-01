@@ -11,8 +11,9 @@
 
 declare(strict_types=1);
 
-namespace Cog\OpenTsdbClient;
+namespace Cog\OpenTsdbClient\Exception;
 
-final class OpenTsdbException extends \RuntimeException
+final class OpenTsdbException extends \RuntimeException implements
+    OpenTsdbExceptionInterface
 {
 }
