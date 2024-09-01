@@ -30,24 +30,25 @@ $httpClient = \Http\Adapter\Guzzle7\Client::createWithConfig(
 );
 $openTsdbBaseUri = 'http://localhost:4242';
 
-$openTsdbClient = new OpenTsdbClient(
+$openTsdbClient = new \Cog\OpenTsdbClient\OpenTsdbClient(
     $httpClient,
     $openTsdbBaseUri,
 );
 
-$metricName = 'test_metric';
-$metricUnixTime = time();
-$metricValue = 42;
-$metricTags = ['tag1_name' => 'tag1_value'];
-
-$dataPointList = new DataPoint(
-    $metricName,
-    $metricUnixTime,
-    $metricValue,
-    $metricTags,
+$dataPointList[] = new \Cog\OpenTsdbClient\DataPoint(
+    metric: 'temperature',
+    timestamp: time(),
+    value: -38.04,
+    tags: ['place' => 'south_pole'],
+);
+$dataPointList[] = new \Cog\OpenTsdbClient\DataPoint(
+    metric: 'temperature',
+    timestamp: time(),
+    value: -2.12,
+    tags: ['place' => 'north_pole'],
 );
 
-$this->openTsdbClient->sendDataPoints([$dataPointList]);
+$this->openTsdbClient->sendDataPoints($dataPointList);
 ```
 
 ## Alternatives
