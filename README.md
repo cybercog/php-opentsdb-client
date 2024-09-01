@@ -2,9 +2,9 @@
 
 <p align="center">
 <a href="https://discord.gg/A8Phy8yJH6"><img src="https://img.shields.io/static/v1?logo=discord&label=&message=Discord&color=36393f&style=flat-square" alt="Discord"></a>
-<a href="https://github.com/cybercog/php-open-tsdb-client/releases"><img src="https://img.shields.io/github/release/cybercog/php-open-tsdb-client.svg?style=flat-square" alt="Releases"></a>
-<a href="https://github.com/cybercog/php-open-tsdb-client/actions/workflows/tests.yml"><img src="https://img.shields.io/github/actions/workflow/status/cybercog/php-open-tsdb-client/tests.yml?style=flat-square" alt="Build"></a>
-<a href="https://github.com/cybercog/php-open-tsdb-client/blob/master/LICENSE"><img src="https://img.shields.io/github/license/cybercog/php-open-tsdb-client.svg?style=flat-square" alt="License"></a>
+<a href="https://github.com/cybercog/php-opentsdb-client/releases"><img src="https://img.shields.io/github/release/cybercog/php-opentsdb-client.svg?style=flat-square" alt="Releases"></a>
+<a href="https://github.com/cybercog/php-opentsdb-client/actions/workflows/tests.yml"><img src="https://img.shields.io/github/actions/workflow/status/cybercog/php-opentsdb-client/tests.yml?style=flat-square" alt="Build"></a>
+<a href="https://github.com/cybercog/php-opentsdb-client/blob/master/LICENSE"><img src="https://img.shields.io/github/license/cybercog/php-opentsdb-client.svg?style=flat-square" alt="License"></a>
 </p>
 
 ## Introduction
@@ -72,7 +72,7 @@ $openTsdbClient->sendDataPointList($dataPointList);
 
 ## 🌟 Stargazers over time
 
-[![Stargazers over time](https://chart.yhype.me/github/repository-star/v1/R_kgDOMqZgDA.svg)](https://yhype.me?utm_source=github&utm_medium=cybercog-php-open-tsdb-client&utm_content=chart-repository-star-cumulative)
+[![Stargazers over time](https://chart.yhype.me/github/repository-star/v1/R_kgDOMqZgDA.svg)](https://yhype.me?utm_source=github&utm_medium=cybercog-php-opentsdb-client&utm_content=chart-repository-star-cumulative)
 
 ## About CyberCog
 

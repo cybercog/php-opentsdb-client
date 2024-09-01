@@ -1,5 +1,5 @@
 {
-  "name": "cybercog/open-tsdb-client",
+  "name": "cybercog/opentsdb-client",
   "description": "PHP OpenTSDB HTTP Client",
   "type": "library",
   "license": "MIT",
@@ -7,7 +7,7 @@
     "cog",
     "cybercog",
     "php",
-    "open-tsdb",
+    "opentsdb",
     "observability",
     "monitoring",
     "metrics"
@@ -20,13 +20,13 @@
       "role": "Developer"
     }
   ],
-  "homepage": "https://komarev.com/sources/php-open-tsdb-client",
+  "homepage": "https://komarev.com/sources/php-opentsdb-client",
   "support": {
     "email": "open@cybercog.su",
-    "issues": "https://github.com/cybercog/php-open-tsdb-client/issues",
-    "wiki": "https://github.com/cybercog/php-open-tsdb-client/wiki",
-    "source": "https://github.com/cybercog/php-open-tsdb-client",
-    "docs": "https://github.com/cybercog/php-open-tsdb-client"
+    "issues": "https://github.com/cybercog/php-opentsdb-client/issues",
+    "wiki": "https://github.com/cybercog/php-opentsdb-client/wiki",
+    "source": "https://github.com/cybercog/php-opentsdb-client",
+    "docs": "https://github.com/cybercog/php-opentsdb-client"
   },
   "require": {
     "php": "^8.0",
