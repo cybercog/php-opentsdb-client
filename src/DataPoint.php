@@ -32,6 +32,8 @@ final class DataPoint implements
         private int | float | string $value,
         private array $tags,
     ) {
+        // TODO: Assert metric != ''
+        // TODO: Assert timestamp > 0
         // TODO: Assert at least one tag value pair supplied
     }
 
