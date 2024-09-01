@@ -60,3 +60,22 @@ $openTsdbClient->sendDataPointList($dataPointList);
 - [Java](https://github.com/sps/metrics-opentsdb)
 - [Go](https://github.com/bluebreezecf/opentsdb-goclient)
 - [.net](https://github.com/dejanfajfar/openTSDB.net)
+
+## License
+
+- `OpenTSDB PHP Client` package is open-sourced software licensed under the [MIT license](LICENSE) by [Anton Komarev].
+
+## 🌟 Stargazers over time
+
+[![Stargazers over time](https://chart.yhype.me/github/repository-star/v1/R_kgDOMqZgDA.svg)](https://yhype.me?utm_source=github&utm_medium=cybercog-php-open-tsdb-client&utm_content=chart-repository-star-cumulative)
+
+## About CyberCog
+
+[CyberCog] is a Social Unity of enthusiasts. Research the best solutions in product & software development is our passion.
+
+- [Follow us on Twitter](https://twitter.com/cybercog)
+
+<a href="https://cybercog.su"><img src="https://cloud.githubusercontent.com/assets/1849174/18418932/e9edb390-7860-11e6-8a43-aa3fad524664.png" alt="CyberCog"></a>
+
+[Anton Komarev]: https://komarev.com
+[CyberCog]: https://cybercog.su
