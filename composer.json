@@ -29,7 +29,7 @@
     "docs": "https://github.com/cybercog/php-open-tsdb-client"
   },
   "require": {
-    "php": "^8.1",
+    "php": "^8.0",
     "psr/http-client": "^1.0"
   },
   "require-dev": {

@@ -27,7 +27,7 @@ final class OpenTsdbClient
     /**
      * @param list<DataPoint> $dataPointList
      */
-    public function sendDataPoints(
+    public function sendDataPointList(
         array $dataPointList,
     ): void {
         $request = new Request(
