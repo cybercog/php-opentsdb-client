@@ -10,7 +10,8 @@
     "opentsdb",
     "observability",
     "monitoring",
-    "metrics"
+    "metrics",
+    "victoriametrics"
   ],
   "authors": [
     {
