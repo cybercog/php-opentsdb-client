@@ -21,7 +21,6 @@ via the API such as querying time-series data, managing metadata and storing dat
 ## Usage
 
 ```php
-$openTsdbBaseUri = 'http://localhost:4242';
 $httpClient = \Http\Adapter\Guzzle7\Client::createWithConfig(
     [
         'timeout' => 4,
@@ -29,10 +28,11 @@ $httpClient = \Http\Adapter\Guzzle7\Client::createWithConfig(
         'http_errors' => false,
     ],
 );
+$openTsdbBaseUri = 'http://localhost:4242';
 
 $openTsdbClient = new OpenTsdbClient(
-    $openTsdbBaseUri,
     $httpClient,
+    $openTsdbBaseUri,
 );
 
 $metricName = 'test_metric';
