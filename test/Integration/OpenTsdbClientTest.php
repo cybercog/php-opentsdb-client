@@ -20,22 +20,33 @@ use PHPUnit\Framework\TestCase;
 
 final class OpenTsdbClientTest extends TestCase
 {
-    public function test(): void
+    public function testSuccess(): void
     {
         $dataPointList[] = new DataPoint(
             metric: 'temperature',
-            timestamp: time(),
+            timestamp: 1,
             value: -38.04,
             tags: ['place' => 'south_pole'],
         );
         $dataPointList[] = new DataPoint(
             metric: 'temperature',
-            timestamp: time(),
+            timestamp: 1,
             value: -2.12,
             tags: ['place' => 'north_pole'],
         );
 
-        $openTsdbClient = new OpenTsdbClient(
+        $openTsdbClient = $this->initOpenTsdbClient();
+
+        $response = $openTsdbClient->sendDataPointList($dataPointList);
+        $this->assertSame(200, $response->httpStatusCode());
+        $this->assertSame(2, $response->success());
+        $this->assertSame(0, $response->failed());
+        $this->assertSame([], $response->errors());
+    }
+
+    private function initOpenTsdbClient(): OpenTsdbClient
+    {
+        return new OpenTsdbClient(
             httpClient: Client::createWithConfig(
                 [
                     'timeout' => 4,
@@ -45,7 +56,5 @@ final class OpenTsdbClientTest extends TestCase
             ),
             baseUri: 'http://opentsdb:4242',
         );
-
-        $openTsdbClient->sendDataPointList($dataPointList);
     }
 }

@@ -13,6 +13,6 @@ declare(strict_types=1);
 
 namespace Cog\OpenTsdbClient;
 
-final class OpenTsdbException extends \RuntimeException
+interface OpenTsdbExceptionInterface
 {
 }

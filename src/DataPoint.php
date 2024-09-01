@@ -23,7 +23,7 @@ final class DataPoint implements
 {
     /**
      * @param int $timestamp A Unix epoch style timestamp in seconds or milliseconds.
-     * @param int | float | string $value The value to record for this data point.
+     * @param int | float | string $value The number value to record for this data point.
      * @param array<string, string> $tags A map of tag name/tag value pairs. At least one pair must be supplied.
      */
     public function __construct(
@@ -32,9 +32,48 @@ final class DataPoint implements
         private int | float | string $value,
         private array $tags,
     ) {
-        // TODO: Assert metric != ''
-        // TODO: Assert timestamp > 0
-        // TODO: Assert at least one tag value pair supplied
+        if ($this->metric === '') {
+            throw new \AssertionError(
+                'Metric name is empty',
+            );
+        }
+        if ($this->timestamp <= 0) {
+            throw new \AssertionError(
+                "Invalid timestamp, must be greater than 0, got `$this->timestamp`",
+            );
+        }
+        if ($this->value === '') {
+            throw new \AssertionError(
+                'Metric value is empty',
+            );
+        }
+        if (!\is_numeric($this->value)) {
+            throw new \AssertionError(
+                "Metric value is not numeric, got `$this->value`",
+            );
+        }
+        if ($this->tags === []) {
+            throw new \AssertionError(
+                'At least one tag value pair must be supplied',
+            );
+        }
+        foreach ($this->tags as $tagName => $tagValue) {
+            if (empty($tagName) || empty($tagValue)) {
+                throw new \AssertionError(
+                    "Tag name and value are required, got `$tagName=$tagValue`",
+                );
+            }
+            if (!\is_string($tagName)) {
+                throw new \AssertionError(
+                    "Tag name must be string, got `" . get_debug_type($tagName) . "`",
+                );
+            }
+            if (!\is_string($tagValue)) {
+                throw new \AssertionError(
+                    "Tag value must be string, got `" . get_debug_type($tagValue) . "`",
+                );
+            }
+        }
     }
 
     public function jsonSerialize(): array
