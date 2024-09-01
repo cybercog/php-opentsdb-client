@@ -24,9 +24,9 @@ final class DataPointTest extends TestCase
      */
     #[DataProvider('provideItCanSanitizeValuesData')]
     public function testItCanSanitizeValues(
-          string $expectedJson,
-          string $metric,
-          array $tags,
+        string $expectedJson,
+        string $metric,
+        array $tags,
     ): void {
         $dataPoint = new DataPoint(
             metric: $metric,
