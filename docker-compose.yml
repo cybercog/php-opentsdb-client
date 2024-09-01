@@ -1,6 +1,6 @@
 services:
   php80:
-    container_name: php-opentsdb-client-lib-80
+    container_name: php-opentsdb-client-lib-php-80
     image: php-opentsdb-client-lib-80
     build:
       context: ./
@@ -9,9 +9,11 @@ services:
     working_dir: /app
     volumes:
       - ./:/app
+    networks:
+      - php-opentsdb-client-lib
 
   php81:
-    container_name: php-opentsdb-client-lib-81
+    container_name: php-opentsdb-client-lib-php-81
     image: php-opentsdb-client-lib-81
     build:
       context: ./
@@ -20,9 +22,11 @@ services:
     working_dir: /app
     volumes:
       - ./:/app
+    networks:
+      - php-opentsdb-client-lib
 
   php82:
-    container_name: php-opentsdb-client-lib-82
+    container_name: php-opentsdb-client-lib-php-82
     image: php-opentsdb-client-lib-82
     build:
       context: ./
@@ -31,9 +35,11 @@ services:
     working_dir: /app
     volumes:
       - ./:/app
+    networks:
+      - php-opentsdb-client-lib
 
   php83:
-    container_name: php-opentsdb-client-lib-83
+    container_name: php-opentsdb-client-lib-php-83
     image: php-opentsdb-client-lib-83
     build:
       context: ./
@@ -42,3 +48,22 @@ services:
     working_dir: /app
     volumes:
       - ./:/app
+    networks:
+      - php-opentsdb-client-lib
+
+  opentsdb:
+    container_name: php-opentsdb-client-lib-opentsdb
+    image: petergrace/opentsdb-docker:latest
+    environment:
+      - WAITSECS=30 # Give time for hbase to shutdown, otherwise data corruption may result
+    ports:
+      - 4242:4242
+      - 60030:60030
+    networks:
+      - php-opentsdb-client-lib
+    volumes:
+      - "./.docker_data_hbase:/data/hbase"
+
+networks:
+  php-opentsdb-client-lib:
+    driver: bridge
