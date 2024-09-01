@@ -20,14 +20,14 @@ use Psr\Http\Client\ClientInterface;
 final class OpenTsdbClient
 {
     public function __construct(
-        private readonly ClientInterface $httpClient,
-        private readonly string $baseUri,
+        private ClientInterface $httpClient,
+        private string $baseUri,
     ) {}
 
     /**
      * @param list<DataPoint> $dataPointList
      */
-    public function sendDataPoints(
+    public function sendDataPointList(
         array $dataPointList,
     ): void {
         $request = new Request(

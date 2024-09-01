@@ -19,13 +19,21 @@ use PHPUnit\Framework\TestCase;
 
 final class DataPointTest extends TestCase
 {
+    /**
+     * @dataProvider provideItCanSanitizeValuesData
+     */
     #[DataProvider('provideItCanSanitizeValuesData')]
     public function testItCanSanitizeValues(
         string $expectedJson,
-        string $metricName,
+        string $metric,
         array $tags,
     ): void {
-        $dataPoint = new DataPoint($metricName, 0, 1, $tags);
+        $dataPoint = new DataPoint(
+            metric: $metric,
+            timestamp: 0,
+            value: 1,
+            tags: $tags,
+        );
 
         $this->assertSame(
             $expectedJson,

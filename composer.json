@@ -29,12 +29,12 @@
     "docs": "https://github.com/cybercog/php-open-tsdb-client"
   },
   "require": {
-    "php": "^8.1",
+    "php": "^8.0",
     "psr/http-client": "^1.0"
   },
   "require-dev": {
     "php-http/guzzle7-adapter": "^1.0",
-    "phpunit/phpunit": "^10.0"
+    "phpunit/phpunit": "^10.0|^9.6"
   },
   "autoload": {
     "psr-4": {

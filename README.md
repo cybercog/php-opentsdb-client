@@ -55,7 +55,7 @@ $dataPointList[] = new \Cog\OpenTsdbClient\DataPoint(
     tags: ['place' => 'north_pole'],
 );
 
-$this->openTsdbClient->sendDataPoints($dataPointList);
+$this->openTsdbClient->sendDataPointList($dataPointList);
 ```
 
 ## Alternatives
