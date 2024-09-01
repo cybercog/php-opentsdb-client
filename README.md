@@ -1,5 +1,12 @@
 # OpenTSDB PHP Client
 
+<p align="center">
+<a href="https://discord.gg/A8Phy8yJH6"><img src="https://img.shields.io/static/v1?logo=discord&label=&message=Discord&color=36393f&style=flat-square" alt="Discord"></a>
+<a href="https://github.com/cybercog/php-open-tsdb-client/releases"><img src="https://img.shields.io/github/release/cybercog/php-open-tsdb-client.svg?style=flat-square" alt="Releases"></a>
+<a href="https://github.com/cybercog/php-open-tsdb-client/actions/workflows/tests.yml"><img src="https://img.shields.io/github/actions/workflow/status/cybercog/php-open-tsdb-client/tests.yml?style=flat-square" alt="Build"></a>
+<a href="https://github.com/cybercog/php-open-tsdb-client/blob/master/LICENSE"><img src="https://img.shields.io/github/license/cybercog/php-open-tsdb-client.svg?style=flat-square" alt="License"></a>
+</p>
+
 ## Introduction
 
 This package allows you to send metrics (data points) to the OpenTSDB database
