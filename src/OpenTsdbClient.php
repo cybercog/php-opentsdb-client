@@ -20,8 +20,8 @@ use Psr\Http\Client\ClientInterface;
 final class OpenTsdbClient
 {
     public function __construct(
-        private readonly ClientInterface $httpClient,
-        private readonly string $baseUri,
+        private ClientInterface $httpClient,
+        private string $baseUri,
     ) {}
 
     /**

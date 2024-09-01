@@ -27,10 +27,10 @@ final class DataPoint implements
      * @param array<string, string> $tags A map of tag name/tag value pairs. At least one pair must be supplied.
      */
     public function __construct(
-        private readonly string $metric,
-        private readonly int $timestamp,
-        private readonly int | float | string $value,
-        private readonly array $tags,
+        private string $metric,
+        private int $timestamp,
+        private int | float | string $value,
+        private array $tags,
     ) {
         // TODO: Assert at least one tag value pair supplied
     }

@@ -1,5 +1,16 @@
 services:
-  php74:
+  php80:
+    container_name: php-open-tsdb-client-lib-80
+    image: php-open-tsdb-client-lib-80
+    build:
+      context: ./
+      dockerfile: ./.docker/php80/Dockerfile
+    tty: true
+    working_dir: /app
+    volumes:
+      - ./:/app
+
+  php81:
     container_name: php-open-tsdb-client-lib-81
     image: php-open-tsdb-client-lib-81
     build:
