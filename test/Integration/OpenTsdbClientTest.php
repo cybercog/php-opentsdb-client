@@ -22,6 +22,8 @@ final class OpenTsdbClientTest extends TestCase
 {
     public function testSuccess(): void
     {
+        $this->markTestSkipped('Only for development environment. Need to pull opentsdb container to GitHub.');
+
         $dataPointList[] = new DataPoint(
             metric: 'temperature',
             timestamp: 1,
