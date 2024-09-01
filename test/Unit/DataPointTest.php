@@ -24,31 +24,31 @@ final class DataPointTest extends TestCase
      */
     #[DataProvider('provideItCanSanitizeValuesData')]
     public function testItCanSanitizeValues(
-      string $expectedJson,
-      string $metric,
-      array $tags,
+          string $expectedJson,
+          string $metric,
+          array $tags,
     ): void {
         $dataPoint = new DataPoint(
-          metric: $metric,
-          timestamp: 0,
-          value: 1,
-          tags: $tags,
+            metric: $metric,
+            timestamp: 0,
+            value: 1,
+            tags: $tags,
         );
 
         $this->assertSame(
-          $expectedJson,
-          json_encode($dataPoint),
+            $expectedJson,
+            json_encode($dataPoint),
         );
     }
 
     public static function provideItCanSanitizeValuesData(): array
     {
         return [
-          [
-            '{"metric":"metric-name","timestamp":0,"value":1,"tags":{"tag-name":"-value"}}',
-            'metric:name',
-            ['tag:name' => '$value'],
-          ],
+            [
+                '{"metric":"metric-name","timestamp":0,"value":1,"tags":{"tag-name":"-value"}}',
+                'metric:name',
+                ['tag:name' => '$value'],
+            ],
         ];
     }
 }
