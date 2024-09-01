@@ -19,6 +19,9 @@ use PHPUnit\Framework\TestCase;
 
 final class DataPointTest extends TestCase
 {
+    /**
+     * @dataProvider provideItCanSanitizeValuesData
+     */
     #[DataProvider('provideItCanSanitizeValuesData')]
     public function testItCanSanitizeValues(
         string $expectedJson,
