@@ -11,7 +11,7 @@
 
 declare(strict_types=1);
 
-namespace Cog\OpenTsdbClient;
+namespace Cog\OpenTsdbClient\Exception;
 
 interface OpenTsdbExceptionInterface
 {

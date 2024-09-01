@@ -13,6 +13,8 @@ declare(strict_types=1);
 
 namespace Cog\OpenTsdbClient;
 
+use Cog\OpenTsdbClient\Exception\OpenTsdbConnectionException;
+use Cog\OpenTsdbClient\Exception\OpenTsdbException;
 use GuzzleHttp\Psr7\Request;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
