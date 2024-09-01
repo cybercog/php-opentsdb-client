@@ -62,9 +62,9 @@ $openTsdbClient->sendDataPointList($dataPointList);
 
 ## Alternatives
 
-- [Java](https://github.com/sps/metrics-opentsdb)
-- [Go](https://github.com/bluebreezecf/opentsdb-goclient)
-- [.net](https://github.com/dejanfajfar/openTSDB.net)
+- Java: [sps/metrics-opentsdb](https://github.com/sps/metrics-opentsdb)
+- Go: [bluebreezecf/opentsdb-goclient](https://github.com/bluebreezecf/opentsdb-goclient)
+- .net: [dejanfajfar/openTSDB.net](https://github.com/dejanfajfar/openTSDB.net)
 
 ## License
 
