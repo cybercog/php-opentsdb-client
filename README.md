@@ -10,7 +10,7 @@
 ## Introduction
 
 This package allows you to send (push) metrics (data points) to the OpenTSDB database
-from the PHP application using an HTTP API in push manner.
+from the PHP application using an HTTP API.
 
 - [OpenTSDB HTTP API](http://opentsdb.net/docs/build/html/api_http/index.html)
 
