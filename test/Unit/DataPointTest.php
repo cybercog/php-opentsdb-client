@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of OpenTSDB PHP Client.
+ * This file is part of PHP OpenTSDB HTTP API Client.
  *
  * (c) Anton Komarev <anton@komarev.com>
  *

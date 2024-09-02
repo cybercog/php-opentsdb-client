@@ -1,4 +1,4 @@
-# OpenTSDB PHP HTTP API Client
+# PHP OpenTSDB HTTP API Client
 
 <p align="center">
 <a href="https://discord.gg/A8Phy8yJH6"><img src="https://img.shields.io/static/v1?logo=discord&label=&message=Discord&color=36393f&style=flat-square" alt="Discord"></a>
@@ -57,7 +57,7 @@ $openTsdbClient = new \Cog\OpenTsdbClient\OpenTsdbClient(
             'http_errors' => false,
         ],
     ),
-    baseUri: 'http://localhost:4242',
+    baseUri: 'http://opentsdb:4242',
 );
 
 $openTsdbClient->sendDataPointList($dataPointList);
@@ -71,7 +71,7 @@ $openTsdbClient->sendDataPointList($dataPointList);
 
 ## License
 
-- `OpenTSDB PHP Client` package is open-sourced software licensed under the [MIT license](LICENSE) by [Anton Komarev].
+- `PHP OpenTSDB HTTP API Client` package is open-sourced software licensed under the [MIT license](LICENSE) by [Anton Komarev].
 
 ## 🌟 Stargazers over time
 
