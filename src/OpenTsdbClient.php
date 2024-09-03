@@ -32,28 +32,6 @@ final class OpenTsdbClient
      */
     public function sendDataPointList(
         array $dataPointList,
-    ): SendDataPointListResponse {
-        $result = $this->sendRequest(
-            $this->buildUrl('/api/put?details&summary'),
-            json_encode($dataPointList),
-        );
-
-        $statusCode = $result->getStatusCode();
-        $decodedResult = json_decode($result->getBody()->getContents(), true);
-
-        return new SendDataPointListResponse(
-            $statusCode,
-            $decodedResult['success'],
-            $decodedResult['failed'],
-            $decodedResult['errors'],
-        );
-    }
-
-    /**
-     * @param list<DataPoint> $dataPointList
-     */
-    public function sendDataPointListSilently(
-        array $dataPointList,
     ): void {
         $result = $this->sendRequest(
             $this->buildUrl('/api/put'),
@@ -126,6 +104,28 @@ final class OpenTsdbClient
                     11,
                 );
         }
+    }
+
+    /**
+     * @param list<DataPoint> $dataPointList
+     */
+    public function sendDataPointListWithDebug(
+        array $dataPointList,
+    ): SendDataPointListResponse {
+        $result = $this->sendRequest(
+            $this->buildUrl('/api/put?details&summary'),
+            json_encode($dataPointList),
+        );
+
+        $statusCode = $result->getStatusCode();
+        $decodedResult = json_decode($result->getBody()->getContents(), true);
+
+        return new SendDataPointListResponse(
+            $statusCode,
+            $decodedResult['success'],
+            $decodedResult['failed'],
+            $decodedResult['errors'],
+        );
     }
 
     private function sendRequest(

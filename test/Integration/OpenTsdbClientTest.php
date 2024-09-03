@@ -41,7 +41,7 @@ final class OpenTsdbClientTest extends TestCase
 
         $openTsdbClient = $this->initOpenTsdbClient();
 
-        $response = $openTsdbClient->sendDataPointList($dataPointList);
+        $response = $openTsdbClient->sendDataPointListWithDebug($dataPointList);
         $this->assertSame(200, $response->httpStatusCode());
         $this->assertSame(2, $response->success());
         $this->assertSame(0, $response->failed());
