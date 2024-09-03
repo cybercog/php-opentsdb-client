@@ -20,7 +20,32 @@ use PHPUnit\Framework\TestCase;
 
 final class OpenTsdbClientTest extends TestCase
 {
-    public function testSuccess(): void
+    public function testSendDataPointList(): void
+    {
+        if ($_ENV['APP_ENV'] === 'ci') {
+            $this->markTestSkipped('Only for development environment. Need to pull opentsdb container to GitHub.');
+        }
+
+        $dataPointList[] = new DataPoint(
+            metric: 'temperature',
+            timestamp: 1,
+            value: -38.04,
+            tags: ['place' => 'south_pole'],
+        );
+        $dataPointList[] = new DataPoint(
+            metric: 'temperature',
+            timestamp: 1,
+            value: -2.12,
+            tags: ['place' => 'north_pole'],
+        );
+
+        $openTsdbClient = $this->initOpenTsdbClient();
+
+        $openTsdbClient->sendDataPointList($dataPointList);
+        $this->assertTrue(true);
+    }
+
+    public function testSendDataPointListWithDebug(): void
     {
         if ($_ENV['APP_ENV'] === 'ci') {
             $this->markTestSkipped('Only for development environment. Need to pull opentsdb container to GitHub.');
