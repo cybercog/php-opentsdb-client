@@ -20,7 +20,7 @@ This package does not cover Telnet API, and that's why:
 - HTTP API use cases: production applications, complex data queries, integrations with other systems, and secure communications.
 
 OpenTSDB HTTP API supported by:
-- [VictoriaMetrics](https://docs.victoriametrics.com/#sending-opentsdb-data-via-http-apiput-requests) 
+- [VictoriaMetrics](https://docs.victoriametrics.com/#sending-opentsdb-data-via-http-apiput-requests) but because of [limitation](https://github.com/VictoriaMetrics/VictoriaMetrics/issues/959) `sendDataPointListSilently` should be used to send metrics.
 
 ## What is OpenTSDB
 
