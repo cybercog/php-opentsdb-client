@@ -75,7 +75,7 @@ $openTsdbClient->sendDataPointList($dataPointList);
 
 ## 🌟 Stargazers over time
 
-[![Stargazers over time](https://chart.yhype.me/github/repository-star/v1/R_kgDOMqZgDA.svg)](https://yhype.me?utm_source=github&utm_medium=cybercog-php-opentsdb-client&utm_content=chart-repository-star-cumulative)
+[![Stargazers over time](https://chart.yhype.me/github/repository-star/v1/849764364.svg)](https://yhype.me?utm_source=github&utm_medium=cybercog-php-opentsdb-client&utm_content=chart-repository-star-cumulative)
 
 ## About CyberCog
 
