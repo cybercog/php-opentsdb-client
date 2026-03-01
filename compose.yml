@@ -51,6 +51,32 @@ services:
     networks:
       - php-opentsdb-client-lib
 
+  php84:
+    container_name: php-opentsdb-client-lib-php-84
+    image: php-opentsdb-client-lib-84
+    build:
+      context: ./
+      dockerfile: ./.docker/php84.Dockerfile
+    tty: true
+    working_dir: /app
+    volumes:
+      - ./:/app
+    networks:
+      - php-opentsdb-client-lib
+
+  php85:
+    container_name: php-opentsdb-client-lib-php-85
+    image: php-opentsdb-client-lib-85
+    build:
+      context: ./
+      dockerfile: ./.docker/php85.Dockerfile
+    tty: true
+    working_dir: /app
+    volumes:
+      - ./:/app
+    networks:
+      - php-opentsdb-client-lib
+
   opentsdb:
     container_name: php-opentsdb-client-lib-opentsdb
     image: petergrace/opentsdb-docker:latest
