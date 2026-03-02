@@ -1,10 +1,11 @@
 services:
   php80:
     container_name: php-opentsdb-client-lib-php-80
-    image: php-opentsdb-client-lib-80
     build:
       context: ./
-      dockerfile: ./.docker/php80.Dockerfile
+      dockerfile: ./.docker/php.Dockerfile
+      args:
+        PHP_VERSION: "8.0"
     tty: true
     working_dir: /app
     volumes:
@@ -14,10 +15,11 @@ services:
 
   php81:
     container_name: php-opentsdb-client-lib-php-81
-    image: php-opentsdb-client-lib-81
     build:
       context: ./
-      dockerfile: ./.docker/php81.Dockerfile
+      dockerfile: ./.docker/php.Dockerfile
+      args:
+        PHP_VERSION: "8.1"
     tty: true
     working_dir: /app
     volumes:
@@ -27,10 +29,11 @@ services:
 
   php82:
     container_name: php-opentsdb-client-lib-php-82
-    image: php-opentsdb-client-lib-82
     build:
       context: ./
-      dockerfile: ./.docker/php82.Dockerfile
+      dockerfile: ./.docker/php.Dockerfile
+      args:
+        PHP_VERSION: "8.2"
     tty: true
     working_dir: /app
     volumes:
@@ -40,10 +43,11 @@ services:
 
   php83:
     container_name: php-opentsdb-client-lib-php-83
-    image: php-opentsdb-client-lib-83
     build:
       context: ./
-      dockerfile: ./.docker/php83.Dockerfile
+      dockerfile: ./.docker/php.Dockerfile
+      args:
+        PHP_VERSION: "8.3"
     tty: true
     working_dir: /app
     volumes:
@@ -53,10 +57,11 @@ services:
 
   php84:
     container_name: php-opentsdb-client-lib-php-84
-    image: php-opentsdb-client-lib-84
     build:
       context: ./
-      dockerfile: ./.docker/php84.Dockerfile
+      dockerfile: ./.docker/php.Dockerfile
+      args:
+        PHP_VERSION: "8.4"
     tty: true
     working_dir: /app
     volumes:
@@ -66,10 +71,11 @@ services:
 
   php85:
     container_name: php-opentsdb-client-lib-php-85
-    image: php-opentsdb-client-lib-85
     build:
       context: ./
-      dockerfile: ./.docker/php85.Dockerfile
+      dockerfile: ./.docker/php.Dockerfile
+      args:
+        PHP_VERSION: "8.5"
     tty: true
     working_dir: /app
     volumes:
